@@ -3,19 +3,14 @@ using System;
 
 public class Grounded : Base_State
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
 
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
+    public override void State_Process(float delta)
     {
-        
+        Vector2 move_input = Get_Input();
+        game_character.MoveAndSlideWithSnap(new Vector3(move_input.x * walk_speed, -grav_increment, move_input.y * walk_speed), Vector3.Down * 10, Vector3.Up);
+
+        if(!game_character.IsOnFloor()){state_machine.Change_State(Base_State.States.Falling);}
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+
 }
