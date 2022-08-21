@@ -1,0 +1,9 @@
+C:\Users\User\self made Programs\Godot Tutorials\Open Ended 3D\.mono\temp\bin\Debug\Open Ended 3D.dll
+C:\Users\User\self made Programs\Godot Tutorials\Open Ended 3D\.mono\temp\bin\Debug\Open Ended 3D.pdb
+C:\Users\User\self made Programs\Godot Tutorials\Open Ended 3D\.mono\temp\obj\Debug\Open Ended 3D.csproj.AssemblyReference.cache
+C:\Users\User\self made Programs\Godot Tutorials\Open Ended 3D\.mono\temp\obj\Debug\Open Ended 3D.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\self made Programs\Godot Tutorials\Open Ended 3D\.mono\temp\obj\Debug\Open Ended 3D.AssemblyInfoInputs.cache
+C:\Users\User\self made Programs\Godot Tutorials\Open Ended 3D\.mono\temp\obj\Debug\Open Ended 3D.AssemblyInfo.cs
+C:\Users\User\self made Programs\Godot Tutorials\Open Ended 3D\.mono\temp\obj\Debug\Open Ended 3D.csproj.CoreCompileInputs.cache
+C:\Users\User\self made Programs\Godot Tutorials\Open Ended 3D\.mono\temp\obj\Debug\Open Ended 3D.dll
+C:\Users\User\self made Programs\Godot Tutorials\Open Ended 3D\.mono\temp\obj\Debug\Open Ended 3D.pdb
