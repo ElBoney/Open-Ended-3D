@@ -7,7 +7,6 @@ public class Base_State : Node
     public enum States
     {
         Grounded,
-        Running,
         Jumping,
         Falling,
         Wallrunning,
@@ -36,12 +35,18 @@ public class Base_State : Node
 
     }
 
-    public Vector2 Get_Input()
+    public Vector3 Get_Input()
     {
-        Vector2 move_input = new Vector2(0,0);
+        Vector3 move_input = new Vector3(0,0,0);
         move_input.x = Input.GetAxis("ui_left", "ui_right");
-        move_input.y = Input.GetAxis("ui_down", "ui_up");
-        return move_input.Normalized();
+        move_input.z = Input.GetAxis("ui_up", "ui_down");
+        move_input = move_input.Normalized();
+        return Rotate_Input(move_input);
+    }
+
+    public Vector3 Rotate_Input(Vector3 input)
+    {
+        return input.Rotated(Vector3.Up ,game_character.GetNode<Spatial>("CamPivot").Rotation.y);
     }
 
 }

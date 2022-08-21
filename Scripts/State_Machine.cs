@@ -12,7 +12,6 @@ public class State_Machine : Node
     public override void _Ready()
     {
         states.Add(Base_State.States.Grounded, GetNode<Base_State>("Grounded"));
-        states.Add(Base_State.States.Running, GetNode<Base_State>("Running"));
         states.Add(Base_State.States.Jumping, GetNode<Base_State>("Jumping"));
         states.Add(Base_State.States.Falling, GetNode<Base_State>("Falling"));
         states.Add(Base_State.States.Wallrunning, GetNode<Base_State>("WallRun"));

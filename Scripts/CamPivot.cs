@@ -6,7 +6,7 @@ public class CamPivot : Spatial
     Vector2 mouse_input;
     float mouse_sensitivity = 1.0f;
     Vector3 camera_motion;
-    Spatial camera;
+    public Spatial camera;
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
