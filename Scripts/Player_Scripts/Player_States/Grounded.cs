@@ -12,5 +12,13 @@ public class Grounded : Base_State
         if(!game_character.IsOnFloor()){state_machine.Change_State(Base_State.States.Falling);}
     }
 
+    public override void State_Input(InputEvent @event)
+    {
+        if(@event.IsActionPressed("ui_select"))
+        {
+            state_machine.Change_State(Base_State.States.Jumping);
+        }
+    }
+
 
 }

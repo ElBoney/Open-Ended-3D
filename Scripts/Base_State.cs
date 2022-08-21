@@ -15,8 +15,9 @@ public class Base_State : Node
     
         public float grav_increment = 1;
         public static float grav_felt = 0;
-        public const float terminal_velocity = 50;
+        public const float terminal_velocity = -50;
         public float walk_speed = 10;
+        public float jump_hight = 25;
 
     public State_Machine state_machine;
     public KinematicBody game_character;

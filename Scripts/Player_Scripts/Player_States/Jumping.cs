@@ -3,19 +3,19 @@ using System;
 
 public class Jumping : Base_State
 {
-    // Declare member variables here. Examples:
-    // private int a = 2;
-    // private string b = "text";
-
-    // Called when the node enters the scene tree for the first time.
-    public override void _Ready()
+    public override void Initialize()
     {
-        
+        grav_felt = jump_hight;
     }
 
-//  // Called every frame. 'delta' is the elapsed time since the previous frame.
-//  public override void _Process(float delta)
-//  {
-//      
-//  }
+    public override void State_Process(float delta)
+    {
+        Vector3 move_input = Get_Input();
+        if(grav_felt > terminal_velocity){grav_felt -= grav_increment;}
+
+        game_character.MoveAndSlide(new Vector3(move_input.x * walk_speed, grav_felt, move_input.z * walk_speed), Vector3.Up);
+        
+        if(grav_felt < 1){state_machine.Change_State(Base_State.States.Falling);}
+        if(game_character.IsOnFloor()){state_machine.Change_State(Base_State.States.Grounded);}
+    }
 }
