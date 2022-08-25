@@ -45,6 +45,14 @@ public class Base_State : Node
         return Rotate_Input(move_input);
     }
 
+    public void Rotate_Character(Vector3 direction)
+    {
+        if(direction != Vector3.Zero)
+        {
+        game_character.GetNode<Spatial>("CharPivot").LookAt(game_character.Translation + direction, Vector3.Up);
+        }
+    }
+
     public Vector3 Rotate_Input(Vector3 input)
     {
         return input.Rotated(Vector3.Up ,game_character.GetNode<Spatial>("CamPivot").Rotation.y);
