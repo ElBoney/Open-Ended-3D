@@ -90,9 +90,8 @@ text = "Press enter to Reload"
 align = 1
 
 [node name="Teleporter" parent="." instance=ExtResource( 4 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65.6134, 10.1494, 32.6567 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 6.38034, 2.06463, -0.714466 )
 scene_string = "res://LevelTwo.tscn"
-scene_path = NodePath("")
 
 [node name="OmniLight" type="OmniLight" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 22.0793, 21.5872, 48.3948 )
