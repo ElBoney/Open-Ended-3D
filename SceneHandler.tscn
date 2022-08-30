@@ -20,7 +20,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=3]
 resource_name = "fade_scene_in"
-length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
@@ -36,7 +35,6 @@ tracks/0/keys = {
 
 [sub_resource type="Animation" id=2]
 resource_name = "fade_to_black"
-length = 0.6
 tracks/0/type = "value"
 tracks/0/path = NodePath("ColorRect:color")
 tracks/0/interp = 1
