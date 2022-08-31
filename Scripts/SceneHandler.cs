@@ -6,32 +6,36 @@ public class SceneHandler : Node
     public Node current_level;
     public Node level_instance = null;
     AnimationPlayer anim_player;
+    public ResourceInteractiveLoader loader;
 
 
     // Called when the node enters the scene tree for the first time.
     public override void _Ready()
     {
-        current_level = GetNode("Main");
+        current_level = GetChild(0);
         anim_player = GetNode<AnimationPlayer>("AnimationPlayer");
     }
 
-    public void ChangeLevel(string new_level)
+    public void Change_Level(string new_level)
     {
+        loader = ResourceLoader.LoadInteractive(new_level);
+        GD.Print(loader);
         anim_player.Play("fade_to_black");
-
-        var level_name = (PackedScene)ResourceLoader.Load(new_level);
-        level_instance = level_name.Instance();
     }
 
     public void On_Fade_To_Black(string anim_name)
     {
-        if(anim_name == "fade_to_black")
+        if (anim_name == "fade_to_black")
         {
+            loader.Wait();
+
+            var init_level = (PackedScene)loader.GetResource();
+            Node level_instance = init_level.Instance();
             current_level.QueueFree();
             AddChild(level_instance);
 
             current_level = level_instance;
-            level_instance = null;
+            loader.Dispose();
 
             anim_player.Play("fade_scene_in");
         }
