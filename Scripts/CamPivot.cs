@@ -17,15 +17,6 @@ public class CamPivot : Spatial
         camera_motion = Rotation;
     }
 
-    // public override void _Process(float delta)
-    // {
-    //     if(rotation_input != Vector2.Zero && Input.GetMouseMode() == Input.MouseMode.Captured)
-    //     {
-    //         this.RotateY(-rotation_input.x / 360);
-    //         camera.RotateX(-rotation_input.y / 360);
-    //     }
-    // }
-
     public override void _Input(InputEvent @event)
     {
         if(@event is InputEventMouseMotion mouseMotion)

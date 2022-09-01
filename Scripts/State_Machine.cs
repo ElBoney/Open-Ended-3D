@@ -7,20 +7,20 @@ public class State_Machine : Node
     KinematicBody game_character;
     Base_State current_state;
 
-    public Dictionary<Enum, Base_State> states = new Dictionary<Enum, Base_State>();
+    // public Dictionary<Enum, Base_State> states = new Dictionary<Enum, Base_State>();
 
     public override void _Ready()
     {
-        states.Add(Base_State.States.Grounded, GetNode<Base_State>("Grounded"));
-        states.Add(Base_State.States.Jumping, GetNode<Base_State>("Jumping"));
-        states.Add(Base_State.States.Falling, GetNode<Base_State>("Falling"));
-        states.Add(Base_State.States.Wallrunning, GetNode<Base_State>("WallRun"));
-        Change_State(Base_State.States.Falling);
+        // states.Add(Base_State.States.Grounded, GetNode<Base_State>("Grounded"));
+        // states.Add(Base_State.States.Jumping, GetNode<Base_State>("Jumping"));
+        // states.Add(Base_State.States.Falling, GetNode<Base_State>("Falling"));
+        // states.Add(Base_State.States.Wallrunning, GetNode<Base_State>("WallRun"));
+        Change_State(GetNode<Base_State>("Falling"));
     }
 
-    public void Change_State(Enum new_state)
+    public void Change_State(Base_State new_state)
     {
-        current_state = states[new_state];
+        current_state = new_state;
         current_state.Initialize();
     }
     public void Initialize(KinematicBody character_ref)

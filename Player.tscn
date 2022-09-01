@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://Scripts/Player_Scripts/Player_but_Cooler.cs" type="Script" id=1]
 [ext_resource path="res://Scripts/CamPivot.cs" type="Script" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://Scripts/Player_Scripts/Player_States/Jumping.cs" type="Script" id=5]
 [ext_resource path="res://Scripts/Player_Scripts/Player_States/Grounded.cs" type="Script" id=6]
 [ext_resource path="res://Scripts/Player_Scripts/Player_States/WallRun.cs" type="Script" id=7]
+[ext_resource path="res://UI.tscn" type="PackedScene" id=8]
 
 [sub_resource type="CylinderShape" id=1]
 
@@ -56,3 +57,5 @@ script = ExtResource( 4 )
 
 [node name="WallRun" type="Node" parent="StateMachine"]
 script = ExtResource( 7 )
+
+[node name="UI" parent="." instance=ExtResource( 8 )]

@@ -1,21 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Platform.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Scripts/Main.cs" type="Script" id=3]
 [ext_resource path="res://Teleporter.tscn" type="PackedScene" id=4]
 [ext_resource path="res://LongPlatform.tscn" type="PackedScene" id=6]
-
-[sub_resource type="DynamicFontData" id=1]
-font_path = "res://Montserrat-Medium.ttf"
-
-[sub_resource type="DynamicFont" id=2]
-size = 30
-use_mipmaps = true
-font_data = SubResource( 1 )
-
-[sub_resource type="Theme" id=3]
-default_font = SubResource( 2 )
 
 [node name="Main" type="Node"]
 script = ExtResource( 3 )
@@ -66,28 +55,6 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.3739, 0 )
 [node name="DirectionalLight" type="DirectionalLight" parent="."]
 transform = Transform( -0.769714, 0.250875, 0.587028, 0.167095, -0.808314, 0.564542, 0.616132, 0.532625, 0.580251, -2.59472, 19.7118, -7.60756 )
 shadow_enabled = true
-
-[node name="UI" type="Control" parent="."]
-anchor_right = 1.0
-anchor_bottom = 1.0
-theme = SubResource( 3 )
-
-[node name="Reset" type="ColorRect" parent="UI"]
-anchor_right = 1.0
-anchor_bottom = 1.0
-color = Color( 0, 0, 0, 0.470588 )
-
-[node name="Label" type="Label" parent="UI/Reset"]
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-margin_left = -161.0
-margin_top = -19.0
-margin_right = 161.0
-margin_bottom = 19.0
-text = "Press enter to Reload"
-align = 1
 
 [node name="Teleporter" parent="." instance=ExtResource( 4 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 65.6134, 10.1494, 32.6567 )

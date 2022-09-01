@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public class WallRun : Base_State
+public class WallRun : Player_State
 {
     // Declare member variables here. Examples:
     // private int a = 2;
