@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Arhg/1aCgeL6YwsLm23VNvAHewr4Se5qjTKefm1onB44ryap+y6JtVZVfvRARKwdfohsmi+fcxD4S61ZRVW05A==",
+  "dgSpecHash": "xJUwUhJw57GfJb/n6kUH1PdsXhtDmoHaoX1Rw0VYnPFLQUXhoIkl786hdkgLkJntChl6wHrUoKRUBCr18QmSdg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\self made Programs\\Godot Tutorials\\Open Ended 3D\\Open Ended 3D.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\El8on\\Programming\\Godot Projects\\Open-Ended-3D\\Open Ended 3D.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\El8on\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.2\\microsoft.netframework.referenceassemblies.1.0.2.nupkg.sha512",
+    "C:\\Users\\El8on\\.nuget\\packages\\microsoft.netframework.referenceassemblies.net472\\1.0.2\\microsoft.netframework.referenceassemblies.net472.1.0.2.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -10,7 +10,7 @@ public class UI_Pause : Control
     {
         userInterface = GetNode<Control>("Reset");
         userInterface.Hide();
-        Input.SetMouseMode(Input.MouseMode.Captured);
+        Input.MouseMode = Input.MouseModeEnum.Captured;
     }
 
     public override void _UnhandledInput(InputEvent @event)
@@ -18,12 +18,12 @@ public class UI_Pause : Control
         if(@event.IsActionPressed("ui_cancel") && !userInterface.Visible)
         {
             userInterface.Show();
-            Input.SetMouseMode(Input.MouseMode.Visible);
+            Input.MouseMode = Input.MouseModeEnum.Visible;
         }
         else if(@event.IsActionPressed("ui_cancel") && userInterface.Visible)
         {
             userInterface.Hide();
-            Input.SetMouseMode(Input.MouseMode.Captured);
+            Input.MouseMode = Input.MouseModeEnum.Captured;
         }
         if(@event.IsActionPressed("ui_accept") && userInterface.Visible){ GetTree().ReloadCurrentScene(); }
         if(@event.IsActionPressed("ui_reset")){ GetTree().ReloadCurrentScene(); }
